@@ -110,8 +110,8 @@ jobs:
 
       - name: Set-up Qt for cross-compilation
         run: |
-          brew fetch --force --bottle-tag=monterey llvm
-          brew install --ignore-dependencies $(brew --cache --bottle-tag=monterey llvm)
+          brew fetch --force --bottle-tag=sonoma llvm
+          brew install --ignore-dependencies $(brew --cache --bottle-tag=sonoma llvm)
           cp /home/linuxbrew/.linuxbrew/Cellar/llvm/*/lib/c++/* $HOME/ldc2-*-osx-x86_64/lib
           rm -rf /home/linuxbrew/.linuxbrew
           cp -r $Qt5_DIR/lib/* $HOME/ldc2-*-osx-x86_64/lib
